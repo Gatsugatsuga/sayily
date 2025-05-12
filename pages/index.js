@@ -40,7 +40,7 @@ export default function TemporaryHome() {
             Raw and a little chaotic — beautifully so, Say<em>ILY</em>.art is a space to spotlight your creativity, uplift your fellow artists, and reconnect with the pieces you’ve lovingly collected.
           </p>
           <p style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Slow down, feel the love, and share the magic.
+            Slow down. Feel the love. Share the magic.
           </p>
           <p style={{ fontFamily: "'Instrument Serif', serif" }}>
             Rediscover the art that moved you — across chains, across time. Feel that first spark again.
@@ -49,7 +49,7 @@ export default function TemporaryHome() {
             Celebrate the creativity that brought you here. One piece at a time.
           </p>
           <p className="text-3xl font-bold" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            <em>ILY</em>, say it back! <span className="text-pink-600">&lt;3</span>
+            <em>ILY</em>. Say it back. <span className="text-pink-600">&lt;3</span>
           </p>
         </div>
 
