@@ -61,7 +61,7 @@ export default function TemporaryHome() {
   rel="noopener noreferrer"
   className="inline-block rounded-2xl bg-[#FF99CC] px-6 py-3 text-black font-semibold shadow-md hover:scale-105 transition-transform duration-200"
 >
-  Join the waitlist!
+  JOIN THE WAITLIST!
 </a>
         </div>
  {/* Logo */}
