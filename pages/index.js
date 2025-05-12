@@ -57,7 +57,7 @@ export default function TemporaryHome() {
             SAY<em>ILY</em>.ART, SAY WHAT?
           </h1>
           <p style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Raw and a little chaotic — beautifully so, Say<em>ILY</em>.art is a space to spotlight your creativity, uplift your fellow artists, and reconnect with the pieces you’ve lovingly collected.
+            Raw and a little chaotic — beautifully so, Say<em>ILY</em>.art is a space to spotlight your creativity, uplift your fellow artists, and reconnect with the pieces you’ve collected over time.
           </p>
           <p style={{ fontFamily: "'Instrument Serif', serif" }}>
             Slow down. Feel the love. Share the magic.
