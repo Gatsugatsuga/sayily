@@ -55,14 +55,14 @@ export default function TemporaryHome() {
 
         {/* CTA Button */}
         <div className="mt-12">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf_3GHSAizqI5-qK2EoyW7mNNm_z39Bec1aDu_qCiUIOcDGmw/viewform"
+         <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSf_3GHSAizqI5-qK2EoyW7mNNm_z39Bec1aDu_qCiUIOcDGmw/viewform"
             target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-black text-white rounded-md font-bold hover:bg-gray-800 transition transform hover:scale-105"
-          >
-            JOIN THE WAITLIST!
-          </a>
+  rel="noopener noreferrer"
+  className="inline-block rounded-2xl bg-[#FF99CC] px-6 py-3 text-black font-semibold shadow-md hover:scale-105 transition-transform duration-200"
+>
+  Join the waitlist!
+</a>
         </div>
  {/* Logo */}
         <div className="mb-10">
