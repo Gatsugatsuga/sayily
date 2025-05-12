@@ -48,7 +48,7 @@ export default function TemporaryHome() {
           <p style={{ fontFamily: "'Instrument Serif', serif" }}>
             Celebrate the creativity that brought you here. One piece at a time.
           </p>
-          <p className="text-3xl font-semibold" style={{ fontFamily: "'Instrument Serif', serif" }}>
+          <p className="text-3xl font-bold" style={{ fontFamily: "'Instrument Serif', serif" }}>
             <em>ILY</em>, say it back! <span className="text-pink-600">&lt;3</span>
           </p>
         </div>
