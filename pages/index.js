@@ -62,7 +62,6 @@ export default function TemporaryHome() {
   </div>
      
         {/* Intro Text */}
-  <p style="text-align:center">
         <div className="max-w-3xl space-y-6 text-[1.5rem] leading-relaxed">
           <h1 className="text-4xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
             SAY<em>ILY</em>.ART, SAY WHAT?
@@ -104,7 +103,6 @@ export default function TemporaryHome() {
             height={160}
           />
         </div>
-</p>
 
       </main>
     </>
