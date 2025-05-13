@@ -37,7 +37,7 @@ export default function TemporaryHome() {
           <p>Rediscover the art that moved you — across chains, across time. Feel that first spark again.</p>
           <p>Celebrate the creativity that brought you here. One piece at a time.</p>
           <p className={styles.ilyEnding}>
-            <em>ILY</em>. Say it back. <span className={styles.heart}>&lt;3</span>
+            <em>ILY</em>. Say it back.
           </p>
         </div>
 
