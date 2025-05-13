@@ -1,1 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Instrument Sans', sans-serif;
+  background: #f7f9fc;
+  display: flex;
+  justify-content: center;
+}
+
+.social-header {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  background-color: #e4ecf4;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  background-color: #a4bad6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Instrument Sans', sans-serif;
+  background-color: #f9f9f9; /* optional */
+}
+
+.waitlistButton {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #a4bad6;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.waitlistButton:hover {
+  background-color: #333;
+  color: white;
+  transform: translateY(-2px);
+}
+
 
