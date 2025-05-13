@@ -25,7 +25,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   color: #222;
-  background-color: #e4ecf4;
+  background-color: #a4bad6;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
@@ -69,7 +69,7 @@
   color: black;
   border-radius: 0.5rem;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
