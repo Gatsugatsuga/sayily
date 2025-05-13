@@ -14,31 +14,38 @@ body {
   font-family: 'Instrument Sans', sans-serif;
   background-color: #f9f9f9;
   text-align: left;
+  position: relative;
 }
 
 .logoContainer {
   width: 100%;
-  max-width: 480px;
+  max-width: 480px; /* 3–4× bigger than original */
   margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    max-width: 320px;
+  }
 }
 
 .socialHeader {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   background: white;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  order: 0;
 }
 
-/* Push social links to the bottom on mobile */
+/* Move social links to the bottom on mobile */
 @media (max-width: 768px) {
   .socialHeader {
-    order: 2;
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin-top: auto;
+    order: 999;
   }
 }
 
