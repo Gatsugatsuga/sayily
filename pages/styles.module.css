@@ -4,22 +4,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2rem;
   min-height: 100vh;
   font-family: 'Instrument Sans', sans-serif;
   background-color: #f9f9f9;
-  box-sizing: border-box;
 }
 
 .socialHeader {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
   background: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   justify-content: center;
 }
 
@@ -42,30 +40,27 @@
 
 .introText {
   max-width: 40rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   font-family: 'Instrument Serif', serif;
   margin-bottom: 2rem;
   text-align: justify;
-  padding: 0 1rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
   margin-bottom: 1.5rem;
-  text-align: center;
 }
 
 .ilyEnding {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: bold;
-  text-align: center;
 }
 
 .heart {
-  color: #ec4899;
+  color: #ec4899; /* Tailwind pink-600 */
 }
 
 .waitlistButton {
@@ -91,34 +86,24 @@
 
 .logoContainer {
   margin-bottom: 2rem;
+  /* You can adjust the size of the logo here */
 }
 
-@media (max-width: 640px) {
-  .introText {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .ilyEnding {
-    font-size: 1.2rem;
-  }
-
-  .logoContainer img {
-    width: 100px;
-    height: auto;
-  }
-
+/* Mobile Styles for Social Header */
+@media (max-width: 768px) {
   .socialHeader {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     flex-direction: column;
-    align-items: center;
+  }
+  .socialHeader a {
+    margin: 0.5rem 0;
   }
 
-  .icon {
-    width: 100%;
-    text-align: center;
+  .logoContainer {
+    margin-top: 2rem;
   }
 }
