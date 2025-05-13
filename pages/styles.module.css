@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Playfair+Display:wght@400;700&family=Instrument+Serif&display=swap');
 
 .page {
   display: flex;
@@ -58,7 +58,7 @@
 }
 
 .heart {
-  color: #ec4899; /* Tailwind pink-600 */
+  color: #ec4899;
 }
 
 .waitlistButton {
@@ -85,4 +85,3 @@
 .logoContainer {
   margin-bottom: 2rem;
 }
-
