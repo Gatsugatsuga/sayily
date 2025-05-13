@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import styles from './styles.module.css';
 
 export default function TemporaryHome() {
   return (
@@ -15,41 +16,13 @@ export default function TemporaryHome() {
         />
       </Head>
 
-      <main className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 text-center px-6 font-serif">
+      <main className={styles.page}>
         {/* Social Links */}
-        <div className="mt-8 text-lg">
-          <a
-            href="https://warpcast.com/calledtosayily"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 no-underline hover:underline inline-block mx-3"
-          >
-            // FARCASTER /
-          </a>
-          <a
-            href="https://bsky.app/profile/sayily.bsky.social"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 no-underline hover:underline inline-block mx-3"
-          >
-            / BLUESKY /
-          </a>
-          <a
-            href="https://hey.xyz/u/sayily"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 no-underline hover:underline inline-block mx-3"
-          >
-            / LENS /
-          </a>
-          <a
-            href="https://x.com/sayILYart"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 no-underline hover:underline inline-block mx-3"
-          >
-            / X //
-          </a>
+        <div className={styles.socialHeader}>
+          <a href="https://warpcast.com/calledtosayily" target="_blank" className={styles.icon}>FARCASTER</a>
+          <a href="https://bsky.app/profile/sayily.bsky.social" target="_blank" className={styles.icon}>BLUESKY</a>
+          <a href="https://hey.xyz/u/sayily" target="_blank" className={styles.icon}>LENS</a>
+          <a href="https://x.com/sayILYart" target="_blank" className={styles.icon}>X</a>
         </div>
 
         {/* Intro Text */}
@@ -75,16 +48,14 @@ export default function TemporaryHome() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-12">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf_3GHSAizqI5-qK2EoyW7mNNm_z39Bec1aDu_qCiUIOcDGmw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-2xl bg-[#FF99CC] px-6 py-3 text-black font-semibold shadow-md hover:scale-105 transition-transform duration-200"
-          >
-            JOIN THE WAITLIST!
-          </a>
-        </div>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf_3GHSAizqI5-qK2EoyW7mNNm_z39Bec1aDu_qCiUIOcDGmw/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.waitlistButton}
+        >
+          GET ON THE LIST!
+        </a>
 
         {/* Logo */}
         <div className="mb-10">
