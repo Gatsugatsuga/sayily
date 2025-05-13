@@ -56,8 +56,8 @@ export default function TemporaryHome() {
           <Image
             src="/Logo_Final_almostperfectlytransparent.png"
             alt="SayILY Logo"
-            width={160}
-            height={160}
+            width={480}
+            height={480}
           />
         </div>
       </main>
