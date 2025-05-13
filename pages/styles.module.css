@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Instrument+Serif&family=Instrument+Sans:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .page {
   display: flex;
@@ -8,6 +13,13 @@
   min-height: 100vh;
   font-family: 'Instrument Sans', sans-serif;
   background-color: #f9f9f9;
+  text-align: left;
+}
+
+.logoContainer {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 2rem;
 }
 
 .socialHeader {
@@ -18,7 +30,16 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Push social links to the bottom on mobile */
+@media (max-width: 768px) {
+  .socialHeader {
+    order: 2;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
 }
 
 .icon {
@@ -60,7 +81,7 @@
 }
 
 .heart {
-  color: #ec4899; /* Tailwind pink-600 */
+  color: #ec4899;
 }
 
 .waitlistButton {
@@ -82,27 +103,4 @@
   background-color: #333;
   color: white;
   transform: translateY(-2px);
-}
-
-.logoContainer {
-  margin-bottom: 2rem;
-}
-
-/* Mobile Styles for Social Header */
-@media (max-width: 768px) {
-  .socialHeader {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    flex-direction: column;
-  }
-  .socialHeader a {
-    margin: 0.5rem 0;
-  }
-
-  .logoContainer {
-    margin-bottom: 0;
-  }
 }
