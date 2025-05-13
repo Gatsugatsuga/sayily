@@ -17,12 +17,15 @@ export default function TemporaryHome() {
       </Head>
 
       <main className={styles.page}>
-        {/* Social Links */}
-        <div className={styles.socialHeader}>
-          <a href="https://warpcast.com/calledtosayily" target="_blank" className={styles.icon}>FARCASTER</a>
-          <a href="https://bsky.app/profile/sayily.bsky.social" target="_blank" className={styles.icon}>BLUESKY</a>
-          <a href="https://hey.xyz/u/sayily" target="_blank" className={styles.icon}>LENS</a>
-          <a href="https://x.com/sayILYart" target="_blank" className={styles.icon}>X</a>
+        {/* Logo at the Top */}
+        <div className={styles.logoContainer}>
+          <Image
+            src="/Logo_Final_almostperfectlytransparent.png"
+            alt="SayILY Logo"
+            width={480}
+            height={480}
+            layout="intrinsic"
+          />
         </div>
 
         {/* Intro Text */}
@@ -51,14 +54,12 @@ export default function TemporaryHome() {
           GET ON THE LIST!
         </a>
 
-        {/* Logo */}
-        <div className={styles.logoContainer}>
-          <Image
-            src="/Logo_Final_almostperfectlytransparent.png"
-            alt="SayILY Logo"
-            width={160}
-            height={160}
-          />
+        {/* Social Links at the Bottom on Mobile */}
+        <div className={styles.socialHeader}>
+          <a href="https://warpcast.com/calledtosayily" target="_blank" className={styles.icon}>FARCASTER</a>
+          <a href="https://bsky.app/profile/sayily.bsky.social" target="_blank" className={styles.icon}>BLUESKY</a>
+          <a href="https://hey.xyz/u/sayily" target="_blank" className={styles.icon}>LENS</a>
+          <a href="https://x.com/sayILYart" target="_blank" className={styles.icon}>X</a>
         </div>
       </main>
     </>
