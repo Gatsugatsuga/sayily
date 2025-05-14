@@ -39,11 +39,14 @@ export default function TemporaryHome() {
           <p>Hop into the playground. Feel the love. Share the magic.</p>
           <p>Rediscover the art that moved you — across chains, across time. Feel that first spark again.</p>
           <p>Celebrate the creativity that brought you here. One piece at a time.</p>
-          <p className={styles.ilyEnding}>
-            <em>ILY</em>. Say it back. 
-          </p>
-          <p>—Ismene/p>
-        </div>
+          <p>
+        <strong>ILY. Say it back.</strong>
+        <br />
+        <span>— <a href="https://warpcast.com/ismene">Ismene</a></span>
+      </p>
+    </div>
+  );
+}
 
         {/* CTA Button */}
         <a
