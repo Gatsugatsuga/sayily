@@ -42,6 +42,7 @@ export default function TemporaryHome() {
           <p className={styles.ilyEnding}>
             <em>ILY</em>. Say it back. 
           </p>
+          <p>—Ismene/p>
         </div>
 
         {/* CTA Button */}
