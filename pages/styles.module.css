@@ -41,7 +41,7 @@
 
 .introText {
   max-width: 40rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   font-family: 'Instrument Serif', serif;
   margin-bottom: 1rem;
@@ -49,7 +49,7 @@
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
