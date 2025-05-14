@@ -29,25 +29,22 @@ export default function TemporaryHome() {
         </div>
 
         {/* Intro Text */}
-       <div className={styles.introText}>
-  <h1 className={styles.title}>
-    SAY<em>ILY</em>.ART, SAY WHAT?
-  </h1>
-  <p>
-    Raw and a little chaotic — beautifully so, say<em>ILY</em>.art is a space to spotlight your creativity, uplift fellow artists, and reconnect with the pieces you’ve collected over time.
-  </p>
-  <p>Hop into the playground. Feel the love. Share the magic.</p>
-  <p>Rediscover the art that moved you — across chains, across time. Feel that first spark again.</p>
-  <p>Celebrate the creativity that brought you here. One piece at a time.</p>
-  <p>
-    <strong>ILY. Say it back.</strong>
-    <br />
-    <span>— <a href="https://warpcast.com/ismene">Ismene</a></span>
-  </p>
-</div> {/* closing div tag */}
-
-  );
-}
+        <div className={styles.introText}>
+          <h1 className={styles.title}>
+            SAY<em>ILY</em>.ART, SAY WHAT?
+          </h1>
+          <p>
+            Raw and a little chaotic — beautifully so, say<em>ILY</em>.art is a space to spotlight your creativity, uplift fellow artists, and reconnect with the pieces you’ve collected over time.
+          </p>
+          <p>Hop into the playground. Feel the love. Share the magic.</p>
+          <p>Rediscover the art that moved you — across chains, across time. Feel that first spark again.</p>
+          <p>Celebrate the creativity that brought you here. One piece at a time.</p>
+          <p>
+            <strong>ILY. Say it back.</strong>
+            <br />
+            <span>— <a href="https://warpcast.com/ismene">Ismene</a></span>
+          </p>
+        </div> {/* Closing div for introText */}
 
         {/* CTA Button */}
         <a
@@ -70,3 +67,4 @@ export default function TemporaryHome() {
     </>
   );
 }
+
