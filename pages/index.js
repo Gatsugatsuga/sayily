@@ -40,11 +40,11 @@ export default function TemporaryHome() {
           <p>Rediscover the art that moved you — across chains, across time. Feel that first spark again.</p>
           <p>Celebrate the creativity that brought you here. One piece at a time.</p>
           <p>
-        <strong>ILY. Say it back.</strong>
-        <br />
-        <span>— <a href="https://warpcast.com/ismene">Ismene</a></span>
-      </p>
-    </div>
+          <strong>ILY. Say it back.</strong>
+            <br />
+            <span>— <a href="https://warpcast.com/ismene">Ismene</a></span>
+          </p>
+        </div>
   );
 }
 
