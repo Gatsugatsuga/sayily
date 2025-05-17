@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customizable Artist Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Top Toolbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white border-b shadow z-50">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+      <!-- Logo Image -->
+      <img 
+        src="/sayily/Logo_Final_almostperfectlytransparent.png" 
+        alt="sayILY.art logo" 
+        class="h-6 cursor-pointer" 
+        style="height: 24px;" 
+      />
+      <div class="flex gap-6 items-center">
+        <button title="Profile" onclick="showSection('profile')">
+          <svg class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9.001 9.001 0 0112 15c1.657 0 3.183.504 4.438 1.361M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </button>
+       <button title="Home" onclick="showSection('home')">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 7.172a5.505 5.505 0 00-9.193-1.137L12 7.07l-.56-.935a5.505 5.505 0 00-9.192 1.137A5.964 5.964 0 002 10.46c0 1.395.457 2.678 1.236 3.709 1.228 1.6 2.778 2.887 4.415 4.099.798.596 1.62 1.21 2.433 1.855a1.387 1.387 0 001.69 0c.814-.645 1.635-1.26 2.433-1.855 1.637-1.212 3.187-2.5 4.415-4.099A5.964 5.964 0 0022 10.46a5.964 5.964 0 00-.248-3.288z" />
+  </svg>
+</button>
+        <button title="Research" onclick="showSection('research')">
+          <svg class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1016.65 16.65z"/>
+          </svg>
+        </button>
+        <button title="Collab" onclick="showSection('collab')">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v3.75m6-3.75v3.75M4.5 8.25h15M5.25 21h13.5a.75.75 0 00.686-1.02l-2.97-7.418A2.25 2.25 0 0014.904 11.25H9.096a2.25 2.25 0 00-2.062 1.312l-2.97 7.418a.75.75 0 00.686 1.02z" />
+  </svg>
+</button>
+        <button title="Messages" onclick="showSection('messages')">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+  </svg>
+</button>
+
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.99 9.99 0 01-5.373-1.562L3 21l1.562-3.627A9.99 9.99 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </button>
+        
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600 truncate max-w-[100px]" id="walletShort">
+          No Wallet
+        </div>
+        <button title="Settings">
+          <svg class="w-5 h-5 text-gray-500 hover:text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 3v1.125m0 15.75V21m8.485-8.485l-.795.794m-13.64 0l-.794-.794m15.435-4.95l-.794-.794m-13.64 0l-.794.794M21 11.25h-1.125M3 11.25H1.875m8.625-6.375a9 9 0 111.5 0"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-[72px] p-4" id="pageContent">
+    <div id="home" class="page-section">Welcome Home</div>
+    <div id="profile" class="page-section hidden">Your Profile Page</div>
+    <div id="research" class="page-section hidden">Research Zone</div>
+    <div id="messages" class="page-section hidden">Messages</div>
+    <div id="notifications" class="page-section hidden">Notifications</div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.page-section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
