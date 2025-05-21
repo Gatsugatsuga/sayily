@@ -1,0 +1,79 @@
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { SendHorizonal } from "lucide-react";
+import { HeartIcon } from '@heroicons/react/24/solid';
+
+export default function MessengerWidget() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+
+  const handleSend = () => {
+    if (!input.trim()) return;
+    setMessages([...messages, { id: Date.now(), text: input, from: "me" }]);
+    setInput("");
+    // Sound effect trigger would go here
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      {!open && (
+        <motion.button
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          className="rounded-full p-4 shadow-xl"
+          style={{ backgroundColor: '#A4bad6' }}
+          onClick={() => setOpen(true)}
+        >
+          <HeartIcon className="w-6 h-6 text-white" />
+        </motion.button>
+      )}
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ type: "spring", duration: 0.4 }}
+          >
+            <Card className="w-80 max-h-[70vh] flex flex-col">
+              <CardContent className="flex-1 overflow-y-auto space-y-2 p-4">
+                {messages.map((msg) => (
+                  <div
+                    key={msg.id}
+                    className={`rounded-xl px-3 py-2 max-w-[80%] text-sm ${msg.from === "me" ? "bg-blue-100 self-end" : "bg-gray-100 self-start"}`}
+                  >
+                    {msg.text}
+                  </div>
+                ))}
+              </CardContent>
+              <div className="flex items-center gap-2 p-2 border-t">
+                <Input
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                  placeholder="Say ILY. Say what?"
+                />
+                <Button size="icon" onClick={handleSend}>
+                  <SendHorizonal className="w-4 h-4" stroke="#A4bad6" fill="white" />
+                </Button>
+              </div>
+              <Button
+                variant="ghost"
+                className="absolute top-1 right-1"
+                onClick={() => setOpen(false)}
+              >
+                ×
+              </Button>
+            </Card>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

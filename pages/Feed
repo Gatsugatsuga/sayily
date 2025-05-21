@@ -1,0 +1,87 @@
+import {
+  User,
+  Image,
+  Pencil,
+  Sparkles,
+  Hand,
+  DollarSign
+} from 'lucide-react';
+
+const FeedItem = ({ type, user, content, timestamp }) => {
+  const iconMap = {
+    new_member_joined: <User className="w-5 h-5 text-gray-600" />,
+    new_piece_shared: <Image className="w-5 h-5 text-gray-600" />,
+    new_blog_post: <Pencil className="w-5 h-5 text-gray-600" />,
+    new_piece_minted: <Sparkles className="w-5 h-5 text-gray-600" />,
+    new_collaboration_started: <Hand className="w-5 h-5 text-gray-600" />,
+    new_collaboration_for_sale: <DollarSign className="w-5 h-5 text-gray-600" />
+  };
+
+  const descriptionMap = {
+    new_member_joined: `${user.name} joined the platform`,
+    new_piece_shared: `${user.name} shared a new piece: ${content.title}`,
+    new_blog_post: `${user.name} published a blog post: ${content.title}`,
+    new_piece_minted: `${user.name} minted a new piece: ${content.title}`,
+    new_collaboration_started: `${user.name} started a new collaboration: ${content.title}`,
+    new_collaboration_for_sale: `${user.name} listed a collaboration for sale: ${content.title}`
+  };
+
+  return (
+    <div className="flex items-start gap-4 p-4 border rounded-lg shadow-sm">
+      {iconMap[type]}
+      <img
+        src={user.avatar_url}
+        alt={user.name}
+        className="w-10 h-10 rounded-full"
+      />
+      <div>
+        <p className="text-sm font-medium">{descriptionMap[type]}</p>
+        {content.media_url && (
+          <img
+            src={content.media_url}
+            alt={content.title}
+            className="mt-2 max-w-xs rounded"
+          />
+        )}
+        {content.description && (
+          <p className="text-sm text-gray-500 mt-1">{content.description}</p>
+        )}
+        <p className="text-xs text-gray-400 mt-1">
+          {new Date(timestamp).toLocaleString()}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default function Feed({ items = [] }) {
+  return (
+    <div className="space-y-4">
+      {items.map((item) => (
+        <FeedItem key={item.id} {...item} />
+      ))}
+    </div>
+  );
+}
+
+// Example usage
+/*
+<Feed
+  items={[
+    {
+      id: '1',
+      type: 'new_piece_shared',
+      timestamp: '2025-05-19T10:45:00Z',
+      user: {
+        name: 'Alice Doe',
+        avatar_url: 'https://cdn.site.com/avatars/alice.jpg'
+      },
+      content: {
+        title: 'Whispers of Light',
+        description: 'A new piece exploring the interplay of light and emotion.',
+        media_url: 'https://cdn.site.com/pieces/whispers.jpg'
+      }
+    }
+  ]}
+/>
+*/
