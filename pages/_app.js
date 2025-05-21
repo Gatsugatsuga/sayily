@@ -1,5 +1,4 @@
-// pages/_app.js
-import '../src/style/global.css'; // ✅ this is now the right place for global styles
+import '../src/style/global.css';
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
