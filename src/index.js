@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './styles.module.css';
+import './style/global.css';
 
 export default function TemporaryHome() {
   return (
